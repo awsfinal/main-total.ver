@@ -1,0 +1,26 @@
+Node.js 설치 가이드
+
+1. 브라우저에서 https://nodejs.org 접속
+2. "Download Node.js (LTS)" 버튼 클릭 (v20.x.x 버전 권장)
+3. 다운로드된 .msi 파일 실행
+4. 설치 마법사에서 "Next" 계속 클릭
+5. "Add to PATH" 옵션이 체크되어 있는지 확인
+6. 설치 완료 후 컴퓨터 재시작
+
+설치 확인:
+- 새 명령 프롬프트 열기
+- node --version 입력 (버전 정보가 나오면 성공)
+- npm --version 입력 (버전 정보가 나오면 성공)
+
+설치 후 실행 순서:
+1. 백엔드 실행:
+   cd C:\Users\DSO19\Desktop\maybe.main2\backend
+   npm install
+   npm start
+
+2. 새 명령 프롬프트에서 프론트엔드 실행:
+   cd C:\Users\DSO19\Desktop\maybe.main2\front
+   npm install
+   npm start
+
+3. 브라우저에서 http://localhost:3000 접속
