@@ -162,7 +162,7 @@ function CameraPage() {
     // 칼만필터 리셋 (새로운 측정 세션 시작)
     getKalmanFilter().reset();
     
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 10; i++) {
       try {
         const position = await getSingleGPSReading();
         const measurement = {
@@ -193,7 +193,7 @@ function CameraPage() {
         console.log(`   출력: ${filtered.latitude.toFixed(7)}, ${filtered.longitude.toFixed(7)}`);
         readings.push(filtered);
         
-        setLocationStatus(`📡 칼만필터 GPS 측정 중... (${i+1}/3)`);
+        setLocationStatus(`📡 칼만필터 GPS 측정 중... (${i+1}/10)`);
         await new Promise(resolve => setTimeout(resolve, 500)); // 0.5초 대기
       } catch (error) {
         console.error(`GPS 측정 ${i+1} 실패:`, error);
